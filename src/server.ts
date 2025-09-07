@@ -41,7 +41,7 @@ app.use('/admin', adminRoutes);
 app.get('/health', (req, res) => {
 	res.status(200).json({
 		status: 'OK',
-		message: 'Servidor de imágenes funcionando',
+		message: 'Servidor CDN funcionando',
 		timestamp: new Date().toISOString()
 	});
 });
@@ -58,8 +58,8 @@ app.use('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-	console.log(`Servidor de imágenes TypeScript ejecutándose en el puerto ${PORT}`);
+	console.log(`Servidor CDN ejecutándose en el puerto ${PORT}`);
 	console.log(`Health check: http://localhost:${PORT}/health`);
-	console.log(`Endpoint de imágenes: http://localhost:${PORT}/cdn-cgi/image/fit=cover,format=avif,quality=85,width=1920/G8AN02`);
+	console.log(`Endpoint de imágenes: http://localhost:${PORT}/cdn-cgi/image/fit=cover,format=avif,quality=85,width=1920/[id]`);
 	console.log(`Admin API: http://localhost:${PORT}/admin/login`);
 });

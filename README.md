@@ -18,5 +18,5 @@ npm run dev
 El servidor corre en el `localhost:3000`   
 para ver las imagenes sigue el siguiente enlace
 ```
-http://localhost:3000/cdn-cgi/image/fit=cover,format=avif,quality=85,width=1920/keyart/{tu imagen}
+http://localhost:3000/cdn-cgi/image/fit=cover,format=avif,quality=85,width=1920/keyart/[id]
 ```
