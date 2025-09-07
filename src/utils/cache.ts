@@ -2,6 +2,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import crypto from 'crypto';
 import { CacheItem } from '../types';
+import { CACHE_MAX_SIZE } from '../config/constants';
 
 export class ImageCache {
 	private cacheDir: string;
@@ -9,7 +10,7 @@ export class ImageCache {
 	private currentSize: number = 0;
 	private cacheMap: Map<string, CacheItem> = new Map();
 
-	constructor(cacheDir: string = path.join(__dirname, '../../cache'), maxSize: number = 100 * 1024 * 1024) {
+	constructor(cacheDir: string = path.join(__dirname, '../../cache'), maxSize: number = CACHE_MAX_SIZE) {
 		this.cacheDir = cacheDir;
 		this.maxSize = maxSize;
 		this.init();
@@ -87,7 +88,7 @@ export class ImageCache {
 
 		// Si excede el tamaño máximo, limpiar elementos más antiguos
 		while (this.currentSize + itemSize > this.maxSize && this.cacheMap.size > 0) {
-			// Encontrar la clave más antigua de manera segura
+			// Encontrar la clave más antigua
 			let oldestKey: string | null = null;
 			let oldestTimestamp = Infinity;
 
@@ -106,7 +107,6 @@ export class ImageCache {
 					this.cacheMap.delete(oldestKey);
 				}
 			} else {
-				// Si no se encuentra la clave más antigua, salir del bucle
 				break;
 			}
 		}

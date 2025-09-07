@@ -8,6 +8,7 @@ yarn-error.log
 /tmp
 /out-tsc
 /bazel-out
+/cache/
 
 # System files
 .DS_Store
