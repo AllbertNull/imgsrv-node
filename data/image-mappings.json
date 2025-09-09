@@ -12,6 +12,10 @@
 		"path": "keyart/kviaaeMP.png"
 	},
 	{
+		"id": "kviaaeMP-backdrop_wide",
+		"path": "keyart/kviaaeMP-backdrop_wide.png"
+	},
+	{
 		"id": "MbuZIw34",
 		"path": "keyart/MbuZIw34.png"
 	},
@@ -22,5 +26,29 @@
 	{
 		"id": "wmHjD7FC",
 		"path": "keyart/wmHjD7FC.png"
+	},
+	{
+		"id": "kzjxxr8A-backdrop_wide",
+		"path": "keyart/7RxYhDPQ-backdrop_wide 1.png"
+	},
+	{
+		"id": "722DHi4D-backdrop_wide",
+		"path": "keyart/7RxYhDPQ-backdrop_wide 2.png"
+	},
+	{
+		"id": "7cPY22l3-backdrop_wide",
+		"path": "keyart/backdrop_wide 3.png"
+	},
+	{
+		"id": "kzjxxr8A-backdrop_tall",
+		"path": "keyart/backdrop_tall 1.png"
+	},
+	{
+		"id": "722DHi4D-backdrop_tall",
+		"path": "keyart/backdrop_tall 2.png"
+	},
+	{
+		"id": "7cPY22l3-backdrop_tall",
+		"path": "keyart/backdrop_tall 3.png"
 	}
 ]
